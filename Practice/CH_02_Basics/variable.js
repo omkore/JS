@@ -4,8 +4,9 @@ var age = 21 //int
 var temp = 25.6 // float
 var name = "jhon" //string
 var isMale = true //boolean
+var score =0;
 
-
+console.log(typeof 10+20)
 // console.log("name : ",name);
 // console.log("temp : ",temp);
 // console.log("age : ",age);
@@ -44,17 +45,17 @@ var isMale = true //boolean
 
 // 1) var 
 
-    var age = 25;
-    console.log(age);
+//     var age = 25;
+//     console.log(age);
 
-// 2) let 
-    let firstname = "jhon"
-    console.log(firstname);
+// // 2) let 
+//     let firstname = "jhon"
+//     console.log(firstname);
     
-// 3) const 
-    const pi = 3.14
+// // 3) const 
+//     const pi = 3.14
 
-    console.log(pi);
+//     console.log(pi);
 
     // pi=4.5 // error : Assignment to constant variable
     // console.log(pi);
