@@ -4,16 +4,16 @@ var age = 21 //int
 var temp = 25.6 // float
 var name = "jhon" //string
 var isMale = true //boolean
-var score =0;
+var score ="0";
 
-console.log(typeof 10+20)
-// console.log("name : ",name);
+console.log("name : ",name);
 // console.log("temp : ",temp);
 // console.log("age : ",age);
 // console.log("isMale : ",isMale);
+// console.log(typeof 10+20)
 
 
-// console.log(typeof isMale);
+console.log(typeof age);
 
 
 // console.log( "10"+10); //concatenate
