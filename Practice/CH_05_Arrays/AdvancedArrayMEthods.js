@@ -125,3 +125,46 @@
 // console.log(a);
 
 
+
+// Array forEach() Method
+
+
+// let users = ["jhon","Jane","harry"]
+
+// let CapitalUsers = users.forEach(function(element){
+//      console.log(element.toUpperCase())
+// })
+
+// console.log(CapitalUsers);
+
+
+// Array sort method
+let numbers = [88, 50, 25, 10];
+
+// let sub = numbers.sort(geeks);
+
+// function geeks(a, b) {
+//     return a - b;
+// }
+
+// console.log(sub);
+
+// console.log(Array.isArray(numbers));
+
+
+
+// copyWithin()
+// let array = [1,2,3,4,5];
+
+// // placing at index position 0 the element
+// // between index 3 and 6
+// console.log("Array " + array.copyWithin(1, 1, 4));
+
+
+let array = [1, 2, 3, 4, 5, 6, 7];
+
+// Placing at index position 0 the
+// Element between index 4 and 5
+// console.log("Array " + array.copyWithin(0, 4, 6));
+
+
