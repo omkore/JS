@@ -1,19 +1,41 @@
-// Variables and Values 
+// Variables and Values
 
+// Variable : A JavaScript variable is simply a name of storage location.
+
+// Rules for Creating Variable 
+// Name must start with a letter (a to z or A to Z), underscore( _ ), or dollar( $ ) sign.
+// After first letter we can use digits (0 to 9), for example value1.
+// JavaScript variables are case sensitive, for example x and X are different variables.
+
+// Syantx for Variable
+// var variable_name = variable_value
+
+// Example for Variable 
+var score = 0
+
+
+// Access Variable 
+console.log(score);
+
+// Update Variable 
+score = 1010
+console.log(score)
+
+// Values 
 var age = 21 //int
 var temp = 25.6 // float
 var name = "jhon" //string
 var isMale = true //boolean
 var score ="0";
 
-console.log("name : ",name);
+// console.log("name : ",name);
 // console.log("temp : ",temp);
 // console.log("age : ",age);
 // console.log("isMale : ",isMale);
 // console.log(typeof 10+20)
 
 
-console.log(typeof age);
+// console.log(typeof age);
 
 
 // console.log( "10"+10); //concatenate
