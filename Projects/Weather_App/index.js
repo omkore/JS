@@ -1,15 +1,31 @@
 let btn = document.getElementById("Search-btn")
 console.log(btn);
+let apiKey = "264e379f1ded7d2882f6a3b2f55dfcf2";
+let city_name=document.getElementById("city_name")
+let img=document.getElementById("img")
+let temp=document.getElementById("temp")
+let wind=document.getElementById("wind")
+let humidity=document.getElementById("humidity")
+let cords=document.getElementById("cords")
 
-let temp = document.getElementById("temp")
-
-let city = document.getElementById("input").value
+let city;
 async function getdata(){
-    let res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=18.6161&longitude=73.7286&hourly=temperature_2m`)
+     city = document.getElementById("input").value
+    console.log(city);
+    let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+    console.log(res);
+    
     let data = await res.json();
+    
     console.log(data);
 
-    temp.innerText=data.hourly.temperature_2m[0]+data.hourly_units.temperature_2m
+    
+    
+    city_name.innerText=data.name+", "+data.sys.country
+    temp.innerText=data.main.temp+"°C"
+    wind.innerText=data.wind.speed
+    humidity.innerText=data.main.humidity
+    cords.innerText=`Lon:${Math.round(data.coord["lon"])} | Lat${Math.round(data.coord["lat"])}:`
 }
 btn.addEventListener("click", getdata)
 
