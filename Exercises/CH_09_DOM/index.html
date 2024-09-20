@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        #msg{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="" name="form">
+        <fieldset>
+            <legend>Login</legend>
+            <h1>Welcome Back !</h1>
+            <input type="text" name="username" id="username" placeholder="Enter username"><br><br>
+            <input type="text" name="password" id="password" placeholder="Enter password"><br><br>
+            <label id="msg" ></label>
+            <input onclick="validateForm()" type="button" value="Login" name="btn">
+
+        </fieldset>
+    </form>
+
+    <script>
+        function checkData(){
+            if(document.form.username.value !="" && document.form.password.value !=""){
+                alert("Login Success")
+                
+            }else{
+                document.getElementById("msg").innerText="Please Fill all the blanks !"
+            }
+        }
+        
+        function validateForm(){
+            checkData()                
+           
+        }
+
+    
+
+    </script>
+</body>
+</html>
