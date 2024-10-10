@@ -8,10 +8,20 @@
         #msg{
             color: red;
         }
+        .outer-box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .inner-box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
     </style>
 </head>
 <body>
-    <form action="" name="form">
+    <!-- <form action="" name="form">
         <fieldset>
             <legend>Login</legend>
             <h1>Welcome Back !</h1>
@@ -21,22 +31,27 @@
             <input onclick="validateForm()" type="button" value="Login" name="btn">
 
         </fieldset>
-    </form>
+    </form> -->
+    <button onclick="createBox()">Create Element</button>
+    <button onclick="removeBox()">Remove Element</button>
+    <button onclick="replaceBox()">Replace Element</button>
+    <button onclick="apendChildBox()">Apeend Child Element</button>
+    <button onclick="insertBeforeChildBox()">Insert Before Child Element</button>
 
-    <script>
-        function checkData(){
-            if(document.form.username.value !="" && document.form.password.value !=""){
-                alert("Login Success")
+    <script src="./index.js">
+        // function checkData(){
+        //     if(document.form.username.value !="" && document.form.password.value !=""){
+        //         alert("Login Success")
                 
-            }else{
-                document.getElementById("msg").innerText="Please Fill all the blanks !"
-            }
-        }
+        //     }else{
+        //         document.getElementById("msg").innerText="Please Fill all the blanks !"
+        //     }
+        // }
         
-        function validateForm(){
-            checkData()                
+        // function validateForm(){
+        //     checkData()                
            
-        }
+        // }
 
     
 
