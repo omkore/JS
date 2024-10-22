@@ -27,8 +27,11 @@
             row-gap: 20px;
             column-gap: 20px;
         }
+        .dim{
+            opacity: 0.2;
+        }
 
-        .box{
+        .box{ 
             width: 150px;
             height: 150px;
             border-radius: 20px;
@@ -39,15 +42,62 @@
             font-size: 60px;
             font-family: cursive;
             transition: all .5s ease;
+            
             &:hover{
                 transform: scale(1.1);
             }
         }
+        .alert{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 30%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            justify-content: start;
+            padding-top:30px ;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            /* visibility: hidden; */
+
+        }
+        .alert h1{
+         
+
+            color: gray;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+        }
+    .alert h3{
+        color: gray;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .alert button{
+            background-color: transparent;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            color: gray;
+            border: none;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            &:hover{
+                background-color: rgba(239, 213, 213, 0.2);
+            }
+        }
+        
     </style>
 </head>
 <body>
     <h1>Tic Tac Toe</h1>
-    <div class="container">
+    <div  class="container">
         <div id="0" onclick="play(this)" class="box"></div>
         <div id="1" onclick="play(this)" class="box"></div>
         <div id="2" onclick="play(this)" class="box"></div>
@@ -58,9 +108,15 @@
         <div id="7" onclick="play(this)" class="box"></div>
         <div id="8" onclick="play(this)" class="box"></div>
     </div>
+    <div class="alert">
+        <h1 class="title">Congratulation Player X</h1>
+        <h3>You won the Game</h3>
+        <button onclick="restartGame()">Restart Game</button>
+    </div>
     <script>
         let turn = "X";
         let arr  = new Array(9).fill(null)
+        let isWin = false;
         console.log(arr);
 
         function play(e){
@@ -73,16 +129,52 @@
                 }
                 e.innerText=turn
                 arr[e.id]=turn
+                checkWinner();
+            console.log(arr);
+
             }else{
                 return
             }
             
             // arr[e.]
-            
-            
-            
         }
+
+        function checkWinner(){
+            if(
+                arr[0]!==null && arr[0] == arr[1] && arr[1]==arr[2] ||
+                arr[3]!==null && arr[3] == arr[4] && arr[4]==arr[5] ||
+                arr[6]!==null && arr[6] == arr[7] && arr[7]==arr[8] ||
+                arr[0]!==null && arr[0] == arr[2] && arr[2]==arr[6] ||
+                arr[0]!==null && arr[0] == arr[3] && arr[3]==arr[6] ||
+                arr[1]!==null && arr[1] == arr[4] && arr[4]==arr[7] ||
+                arr[2]!==null && arr[2] == arr[5] && arr[5]==arr[8] ||
+                arr[0]!==null && arr[0] == arr[4] && arr[4]==arr[8] ||
+                arr[2]!==null && arr[2] == arr[4] && arr[4]==arr[6] 
+            ){
+                isWin = true
+                alert(turn,"wins")
+            }else{
+                if(arr.includes(null)){
+                    return
+                }else{
+                    alert("draw")
+                }
+            }
+        }   
+
+        // function stopGame(){
+        //     
+        //     for(let i=0; i<9;i++){
+        //         divs[i]
+        //     }
+        // }
         
+        function restartGame(){
+        
+            arr  = new Array(9).fill(null)
+
+        }
+
     </script>
 </body>
 </html>
