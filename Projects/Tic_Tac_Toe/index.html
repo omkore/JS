@@ -124,12 +124,17 @@
         <button onclick="restartGame()">Restart Game</button>
     </div>
     <script>
+
+
+        // Variable Declarations 
         let turn = "X";
         let arr = new Array(9).fill(null)
         let isWin = false;
         let div = document.getElementById("alert")
-        console.log(arr);
+        let btns = document.querySelectorAll(".box")
 
+
+        // Play Function 
         function play(e) {
             if (!isWin) {
                 if (arr[e.id] == null) {
@@ -141,7 +146,6 @@
                     e.innerText = turn
                     arr[e.id] = turn
                     checkWinner();
-                    console.log(arr);
 
                 } else {
                     return;
@@ -152,6 +156,9 @@
 
 
         }
+
+
+        // checkWinner Function 
 
         function checkWinner() {
             if (
@@ -180,13 +187,8 @@
             }
         }
 
-        // function stopGame(){
-        //     
-        //     for(let i=0; i<9;i++){
-        //         divs[i]
-        //     }
-        // }
-        let btns = document.querySelectorAll(".box")
+        // restartGame Function 
+        
         function restartGame() {
             div.style.visibility = "hidden";
 
