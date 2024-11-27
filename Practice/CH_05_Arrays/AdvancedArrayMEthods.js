@@ -25,17 +25,17 @@
 
 // // Map() **
 
-// let numArr = [4, 9, 16, 25];
+let numArr = [4, 9, 16, 25];
 
-// // Performing map method
-// function square(element,index,arr){
-//     return element*element
-// }
+// Performing map method
+function square(element,index,arr){
+    return element*element
+}
 
-// let ans = numArr.map(square)
+let ans = numArr.map(square)
 
-// console.log(typeof ans);
-// console.log(typeof numArr);
+console.log( ans);
+console.log( numArr);
 
 // every()
 // function ispositive(element, index, array) {
