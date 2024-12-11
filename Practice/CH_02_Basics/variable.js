@@ -28,22 +28,22 @@ var name = "jhon" //string
 var isMale = true //boolean
 var score ="0"; //string
 
-// console.log("name : ",name);
-// console.log("temp : ",temp);
-// console.log("age : ",age);
-// console.log("isMale : ",isMale);
-// console.log(typeof 10+20)
+console.log("name : ",name);
+console.log("temp : ",temp);
+console.log("age : ",age);
+console.log("isMale : ",isMale);
+console.log(typeof 10+20)
 
 
-// console.log(typeof age);
+console.log(typeof age);
 
 
-// console.log( "10"+10); //concatenate = "1010"
-// console.log( "10"- 10);  //bug of js = "0"
+console.log( "10"+10); //concatenate = "1010"
+console.log( "10"- 10);  //bug of js = "0"
 
 
-// var name = prompt("Enter Name : ")
-// alert("Welcome Dr. "+name   )
+var name = prompt("Enter Name : ")
+alert("Welcome Dr. "+name   )
 
 
 
@@ -58,7 +58,7 @@ var score ="0"; //string
     
 // 3 Variable Name does not contain any white space 
     // eg first name, user name
-    solution:- fisrtName / first_name
+   // solution:- fisrtName / first_name
 
 
 
@@ -68,19 +68,19 @@ var score ="0"; //string
 
 // 1) var 
 
-//     var age = 25;
-//     console.log(age);
+    var age = 25;
+    console.log(age);
 
 // // 2) let 
-//     let firstname = "jhon"
-//     console.log(firstname);
+    let firstname = "jhon"
+    console.log(firstname);
     
 // // 3) const 
-//     const pi = 3.14
+    const pi = 3.14
 
-//     console.log(pi); // 3.14
+    console.log(pi); // 3.14
 
-    // pi=4.5 // error : Assignment to constant variable
-    // console.log(pi);
+    pi=4.5 // error : Assignment to constant variable
+    console.log(pi);
     
     
