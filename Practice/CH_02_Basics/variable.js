@@ -11,22 +11,22 @@
 // var variable_name = variable_value
 
 // Example for Variable 
-var score = 0
+var score = 0 //variable Declaration + Initilization
 
 
 // Access Variable 
 console.log(score);
 
 // Update Variable 
-score = 1010
+score = 1010 //variable Assignment \ override value
 console.log(score)
 
 // Values 
-var age = 21 //int
-var temp = 25.6 // float
+var age = 21 //int (number)
+var temp = 25.6 // float (number)
 var name = "jhon" //string
 var isMale = true //boolean
-var score ="0";
+var score ="0"; //string
 
 // console.log("name : ",name);
 // console.log("temp : ",temp);
@@ -38,8 +38,8 @@ var score ="0";
 // console.log(typeof age);
 
 
-// console.log( "10"+10); //concatenate
-// console.log( "10"-10);  //bug of js
+// console.log( "10"+10); //concatenate = "1010"
+// console.log( "10"- 10);  //bug of js = "0"
 
 
 // var name = prompt("Enter Name : ")
@@ -58,6 +58,7 @@ var score ="0";
     
 // 3 Variable Name does not contain any white space 
     // eg first name, user name
+    solution:- fisrtName / first_name
 
 
 
@@ -77,7 +78,7 @@ var score ="0";
 // // 3) const 
 //     const pi = 3.14
 
-//     console.log(pi);
+//     console.log(pi); // 3.14
 
     // pi=4.5 // error : Assignment to constant variable
     // console.log(pi);
